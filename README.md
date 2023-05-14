@@ -1,4 +1,4 @@
-# **Meet TimeSlice!**
+# **Meet TimeSlicer!**
 ### _Your new AI planning assistant._
 
 
