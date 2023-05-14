@@ -28,8 +28,8 @@ db = SQLAlchemy(app)
 
 class TimeBlock(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    start_time = db.Column(db.datetime, nullable=False)
-    end_time = db.Column(db.datetime, nullable=False)
+    start_time = db.Column(db.String, nullable=False)
+    end_time = db.Column(db.String, nullable=False)
     activity = db.Column(db.String(120), nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
