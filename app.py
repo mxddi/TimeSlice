@@ -31,6 +31,9 @@ class TimeBlock(db.Model):
     start_time = db.Column(db.String, nullable=False)
     end_time = db.Column(db.String, nullable=False)
     activity = db.Column(db.String(120), nullable=False)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(120), unique=True, nullable=False)
 
 
 #########################################
@@ -79,11 +82,14 @@ def delete(id):
 @app.route('/time_block', methods=['POST', 'GET'])
 def create_time_block():
     if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
         start_time = request.form['start_time']
         end_time = request.form['end_time']
         activity = request.form['activity']
 
-        time_block = TimeBlock(start_time=start_time, end_time=end_time, activity=activity)
+        time_block = TimeBlock( username = username, email = email, password =password, start_time=start_time, end_time=end_time, activity=activity)
         db.session.add(time_block)
         db.session.commit()
 
