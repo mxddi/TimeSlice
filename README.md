@@ -6,3 +6,6 @@ TimeSplice helps busy professionals and students to plan daily tasks into conven
 utilizing machine learning to suggest schedules based on users' daily habits.
 
 [Check out our demo by clicking here!](https://pages.github.com/).
+
+
+[Here's some of our prototypes made in Figma!](https://www.figma.com/community/file/1239638161463978443)
