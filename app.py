@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -82,6 +82,9 @@ def delete(id):
 @app.route('/time_block', methods=['POST', 'GET'])
 def create_time_block():
     if request.method == 'POST':
+        
+        data = request.get_json()
+
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
@@ -93,7 +96,7 @@ def create_time_block():
         db.session.add(time_block)
         db.session.commit()
 
-        return redirect('/')
+        return jsonify(data), 200
 
     else:
     
