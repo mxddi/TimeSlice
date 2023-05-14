@@ -1,5 +1,5 @@
 # **Meet TimeSlice!**
-### _ _Your new AI planning assistant.
+### _Your new AI planning assistant.
 
 
 TimeSplice helps busy professionals and students to plan daily tasks into convenient "time blocks" throughout the day, 
