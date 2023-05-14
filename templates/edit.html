@@ -1,0 +1,30 @@
+{% block head %}
+<title>Event Edit</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h2>Edit Event {{ time_block.id }}</h2>
+    <form method="POST" action='/edit/{{time_block.id}}'>
+        <label>Event Name:</label>
+        <br>
+        <input type="text" name="activity">
+        <br>
+        <label>Start Time:</label>
+        <br>
+        <input type="text" name="start_time">
+        <br>
+        <label>End Time:</label>
+        <br>
+        <input type="text" name="end_time">
+        <br>
+        <input type="submit" value="Update">
+        <br>
+        <a href="/">Go Back </a>
+        <br>
+        <a href="/show/{{time_block.id}}">Show </a>
+
+    </form>
+</div>
+
+{% endblock %}

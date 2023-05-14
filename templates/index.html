@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Delete a course</title>
+{% endblock %}
+
+{% block body %}
+
+
+<body>
+    <h1>time_block</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>start_time</th>
+                <th>end_time</th>
+                <th>activity</th>
+                <th>Actions</th>
+            </tr>
+            {% for time_block in allTimeblocks %}
+            <tr>
+                <td>{{time_block.id}}</td>
+                <td>{{time_block.start_time}}</td>
+                <td>{{time_block.end_time}}</td>
+                <td>{{time_block.activity}}</td>
+                <td>
+                    <a href="/show/{{time_block.id}}">Show</a>
+                    <a href="/edit/{{time_block.id}}">Edit</a>
+                    <a href="/delete/{{time_block.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/time_block">Add a new event</a>
+    </div>
+
+</body>
+
+{% endblock %}

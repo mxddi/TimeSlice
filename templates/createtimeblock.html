@@ -1,0 +1,30 @@
+{% block head %}
+<title>CreateTimeBlock</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <form method= "POST" action='/time_block'>
+        <label>Start Time:</label>
+        <br>
+        <input type="text" name="start_time">
+        <br>
+        <label>end_time:</label>
+        <br>
+        <input type="text" name="end_time">
+        <br>
+        <label>activity:</label>
+        <br>
+        <input type="text" name="activity">
+        <br>
+        <input type="submit" value="Create">
+
+
+    </form>
+    <br>
+    <a href="/">Go Back </a>
+</div>
+
+
+
+{% endblock %}

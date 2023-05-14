@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Show Event</title>
+{% endblock %}
+
+{% block body %}
+
+<div>
+    <h2>Event {{ time_block.id }}</h2>
+    <br>
+    <p>Event Name: {{ time_block.activity }}</p>
+    <br>
+    <p>Event Start: {{ time_block.start_time }}</p>
+    <br>
+    <p>Event End: {{ time_block.end_time }}</p>
+    <br>
+    <a href="/edit/{{time_block.id}}">Edit</a>
+    <a href="/Delete/{{time_block.id}}">Delete</a>
+</div>
+
+{% endblock %}
