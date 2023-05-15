@@ -9,6 +9,7 @@ Using push notifications, users are reminded when time blocks are about to end o
 
 ### A note on current progress
 TimeSlice is under development and still in the prototyping stage. Stay tuned for more updates on its progress by clicking "watch" at the top of this repository! :)
+We intend to continue developing this app into a full-fledged mobile application with a scalable database. Although time was limited in the Hackathon, we plan to integrate our proposed AI model using an unsupervised learning algorithm, and transfer our temporary SQL Alchemy data to a larger SQL database. The project will be converted from its FlutterFlow prototype to React Native, and made available in both IOS and Android.
 
 [Here's some of our prototypes made in Figma.](https://www.figma.com/community/file/1239638161463978443)
 
